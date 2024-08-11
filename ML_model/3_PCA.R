@@ -4,10 +4,10 @@
 ################################################# PCA ########################################################
 
 # Load Expression Data
-# data <- read.csv("10_rf_count_data.csv")
+data <- read.csv("10_rf_count_data.csv")
 
 # load the metadata
-# sample_info <- read.csv("10_rf_meta_data.csv", header =TRUE,row.names = 1)
+sample_info <- read.csv("10_rf_meta_data.csv", header =TRUE,row.names = 1)
 
 
 # Check for NA or Infinite values
