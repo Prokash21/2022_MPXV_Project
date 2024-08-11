@@ -1,3 +1,4 @@
+
 # Differential expression analysis with limma
 library(GEOquery)
 library(limma)
@@ -17,7 +18,7 @@ fvarLabels(gset) <- make.names(fvarLabels(gset))
 #gsms <- paste0("XXXXXXXXXXXX1X1X1X1X1X1X1X1XXXXXXXXXXXXXXXXXXXXXXX",
 #              "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX0XX",
 #             "XXXX000X00X0X0XXXXXXXXXX")
-#8 vs 6
+#6 vs 8
 gsms <- paste0("XXXXXXXXXXXX1X1X1X1X1X1X1X1XXXXXXXXXXXXXXXXXXXXXXX",
                "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
                "XXXXX00X00X0X0XXXXXXXXXX")
