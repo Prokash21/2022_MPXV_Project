@@ -1,4 +1,4 @@
-# Decoding the Unique Gene Signatures Upon 2022 MPXV Infection: Predictive Biomarkers and Drug Targets via Transcriptomic Network Analysis and Machine Learning Models
+# Identification of Potential Biomarkers for 2022 Mpox Virus Infection: A Transcriptomic Network Analysis and Machine Learning Approach
 
 ## Overview
 This project involves the comprehensive analysis of both microarray and RNA-Seq data to identify differentially expressed genes (DEGs) and validate these genes using machine learning techniques. The analysis includes data extraction, normalization, DEG identification, and machine learning validation, with visualizations like volcano plots, PCA, t-SNE, and ROC curves.
