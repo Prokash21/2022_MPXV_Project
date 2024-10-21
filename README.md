@@ -1,36 +1,110 @@
-# Decoding the Unique Gene Signatures Upon 2022 MPXV Infection: Predictive Biomarkers and Drug Targets via Transcriptomic Network Analysis and Machine Learning Models
+# Identification of Potential Biomarkers for 2022 Mpox Virus Infection: A Transcriptomic Network Analysis and Machine Learning Approach
 
 ## Overview
-This project involves the comprehensive analysis of both microarray and RNA-Seq data to identify differentially expressed genes (DEGs) and validate these genes using machine learning techniques. The analysis includes data extraction, normalization, DEG identification, and machine learning validation, with visualizations like volcano plots, PCA, t-SNE, and ROC curves.
+This project focuses on analyzing microarray and RNA-Seq data to identify differentially expressed genes (DEGs) and validate them using machine learning techniques. The workflow includes data extraction, normalization, DEG identification, and machine learning validation, supported by various visualizations like volcano plots, PCA, t-SNE, and ROC curves.
 
 ## Workflow
 
 ### 1. Data Extraction
-- We obtained the microarray and RNA-Seq datasets from the NCBI Gene Expression Omnibus (GEO) repository.
-- Based on predefined criteria, we selected relevant samples and conditions for analysis.
+- Data was retrieved from the NCBI GEO repository.
+- Relevant samples and conditions were selected based on predefined criteria.
 
 ### 2. Data Preprocessing
-- **Normalization**: The data was normalized to ensure comparability across samples.
-- **Outlier Removal**: Outliers were identified and removed to enhance data quality.
+- **Normalization**: Performed to ensure comparability across samples.
+- **Outlier Removal**: Removed to improve data quality.
 
 ### 3. Differential Expression Analysis
 - **Microarray Data**: 
-  - We used the `limma` package to identify differentially expressed genes (DEGs).
-- **RNA-Seq Data**:
-  - The `DESeq2` package was employed to perform DEG analysis.
+  - Used the `limma` package for DEG analysis.
+- **RNA-Seq Data**: 
+  - Performed using the `DESeq2` package.
 - **Log Fold Change (LFC)**: 
-  - LFC values were calculated for the DEGs, and results were visualized using volcano plots.
+  - Calculated for DEGs and visualized using volcano plots.
 
 ### 4. Machine Learning Validation
 - **Feature Selection**:
-  - DEGs identified through functional analysis were further screened using `PyCaret` to select the best-fitting model.
-  - The top 10 features (genes) were visualized using PCA and t-SNE plots.
+  - DEGs were further filtered using `PyCaret`, selecting the top 10 features (genes).
+  - Visualized using PCA and t-SNE plots.
 - **Model Evaluation**:
-  - The selected features were evaluated and cross-validated using ROC curve analysis to assess their predictive performance.
+  - Evaluated using ROC curve analysis to validate predictive performance.
 - **Biomarker Discovery**:
-  - Finally, we identified 6 key biomarkers associated with the 2022 MPXV (Monkeypox Virus) infection. These biomarkers were validated through rigorous machine learning models and ROC analysis, confirming their potential role in MPXV infection.
+  - Identified six key biomarkers associated with the 2022 MPXV infection, validated through machine learning models.
 
-## Contact
+## ⚙️ Running the Analysis
+
+### 🔍 **ML_model Folder**
+
+1. **Run Python and R Scripts for Machine Learning**:
+   - **Jupyter Notebook** (`1_Pycrate.ipynb`):
+     - Open and run the cells in a Jupyter environment.
+   - **R Scripts** for **PCA**, **t-SNE**, and **ROC**:
+     ```
+     Rscript 2_tSNE.R
+     Rscript 3_PCA.R
+     Rscript 4_pROC.R
+     ```
+
+---
+
+### 🧪 **Microarray Folder**
+
+1. **Run R Scripts for Microarray Data Analysis**:
+   - Required Packages: `affy`, `limma`, `GEOquery`, `ggplot2`
+   - **Run**:
+     ```
+     Rscript 1_Expression_MicroArray.R
+     Rscript 2_UmapPlot_MicroArray.R
+     Rscript 3_TopTable_MicroArray.R
+     Rscript 5_DEGs_Identification_MicroArray.R
+     ```
+
+---
+
+### 🧬 **RNA_Seq Folder**
+
+1. **Run R Scripts for RNA-Seq Data Analysis**:
+   - Required Packages: `DESeq2`, `ggplot2`, `data.table`, `tidyverse`
+   - **Run**:
+     ```
+     Rscript 1_install_packages.R
+     Rscript 2_load_data.R
+     Rscript 3_PCA.R
+     Rscript 4_DGE_Normalization.R
+     Rscript 5_DGE_LFC.R
+     Rscript 6_volcano.R
+     ```
+
+---
+
+## 📦 Dependencies
+
+### R Packages:
+- `limma` v3.54.2
+- `DESeq2` v1.38.3
+- `VennDiagram` v1.7.3
+- `GOplot` v1.0.2
+- `corrplot` v0.92
+- `TBtools-II` v2.097
+- `Rtsne` v0.17
+- `pROC` v1.18.5
+- `randomForest` v4.7.1.1
+- `ggplot2` v3.5.1
+
+### Python Libraries:
+- `PyCaret` v3.3.2
+- `Pandas` v2.1.4
+- `SciPy` v1.11.4
+- `Joblib` v1.3.2
+- `Scikit-Learn` v1.4.2
+- `Sktime` v0.26.0
+- `Pmdarima` v2.0.4
+- `XGBoost`
+- `LightGBM`
+
+---
+
+## 📞 Contact
 For any questions or issues, please contact:
 1. [joyprokash77@student.sust.edu](mailto:joyprokash77@student.sust.edu)
-2. [Kabir56@student.sust.edu](mailto:kabir56@student.sust.edu)
+2. [Kabir56@student.sust.edu](mailto:Kabir56@student.sust.edu)
+3. [preonath@chrfbd.org](mailto:preonath@chrfbd.org)
